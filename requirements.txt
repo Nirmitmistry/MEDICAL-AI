@@ -1,0 +1,42 @@
+# requirements.txt
+# Pinned to the versions installed in the project venv.
+# Install with: pip install -r requirements.txt
+
+# --- Core data / ML ---
+numpy==2.5.2
+pandas==3.0.5
+scikit-learn==1.9.0
+scipy==1.18.0
+
+# --- Visualisation ---
+matplotlib==3.11.1
+seaborn==0.13.2
+wordcloud==1.9.6
+plotly==6.9.0
+
+# --- NLP ---
+nltk==3.10.2
+spacy==3.8.15
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+# scispaCy and BC5CDR model — install separately (large download):
+# pip install scispacy
+# pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.3/en_ner_bc5cdr_md-0.5.3.tar.gz
+
+# --- Biomedical / API ---
+biopython>=1.84        # NCBI Entrez fetch — not in venv yet; pip install biopython
+beautifulsoup4==4.15.0
+
+# --- Jupyter ---
+jupyter==1.1.1
+jupyterlab==4.6.3
+notebook==7.6.2
+ipykernel==7.3.0
+ipywidgets==8.1.8
+nbformat==5.11.0
+nbconvert==7.17.1
+
+# --- Utilities ---
+tqdm==4.70.0
+requests==2.34.2
+langdetect==1.0.9
+regex==2026.7.19

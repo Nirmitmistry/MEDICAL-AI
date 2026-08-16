@@ -32,7 +32,8 @@ config_local.py
 
 # ── Raw data — large / binary files only ──────────────────────────────────────
 # Zip archives are large; ignore them
-data/raw/*.zip
+data/raw/
+*.zip
 data/raw/*.tar.gz
 data/raw/*.gz
 # CSVs in raw/ can be large — ignore them (re-download as needed)
