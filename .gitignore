@@ -1,0 +1,83 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# ── Virtual environment ────────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter ────────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# ── Environment / secrets ──────────────────────────────────────────────────────
+.env
+.env.*
+secrets.py
+config_local.py
+
+# ── Raw data — large / binary files only ──────────────────────────────────────
+# Zip archives are large; ignore them
+data/raw/*.zip
+data/raw/*.tar.gz
+data/raw/*.gz
+# CSVs in raw/ can be large — ignore them (re-download as needed)
+data/raw/*.csv
+# BioASQ JSONs are small enough to keep; comment the next line to ignore them
+# data/raw/BioASQ/*.json
+
+# ── Processed outputs (all regeneratable by running the notebook) ─────────────
+data/processed/
+
+# ── Model checkpoints & weights ───────────────────────────────────────────────
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.hdf5
+
+# ── IDE / OS ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs & profiling ───────────────────────────────────────────────────────────
+*.log
+logs/
+*.prof
+*.lprof
+
+# ── Test / coverage ────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ── Type checking ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+
+# ── ML experiment tracking ────────────────────────────────────────────────────
+wandb/
+mlruns/
+mlartifacts/
