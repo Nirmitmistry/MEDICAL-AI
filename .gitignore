@@ -31,15 +31,21 @@ secrets.py
 config_local.py
 
 # ── Raw data — large / binary files only ──────────────────────────────────────
-# Zip archives are large; ignore them
-data/raw/
+# Zip / compressed archives
 *.zip
-data/raw/*.tar.gz
-data/raw/*.gz
+*.tar.gz
+*.gz
+*.tar
 # CSVs in raw/ can be large — ignore them (re-download as needed)
 data/raw/*.csv
-# BioASQ JSONs are small enough to keep; comment the next line to ignore them
-# data/raw/BioASQ/*.json
+# HuggingFace Arrow dataset files (binary, often hundreds of MB)
+*.arrow
+# Duplicate data directories inside notebooks/
+notebooks/data/
+# BioASQ data files
+data/raw/BioASQ/git reset --soft HEAD~1
+data/raw/health11k/
+data/raw/meddialog/
 
 # ── Processed outputs (all regeneratable by running the notebook) ─────────────
 data/processed/
@@ -82,3 +88,9 @@ coverage.xml
 wandb/
 mlruns/
 mlartifacts/
+data/
+notebooks/data/
+*.arrow
+*.jsongit add .
+git commit -m "Add preprocessing notebooks and ignore dataset files"git add .
+git commit -m "Add preprocessing notebooks and ignore dataset files"
