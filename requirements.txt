@@ -35,3 +35,6 @@ tqdm==4.70.0
 requests==2.34.2
 langdetect==1.0.9
 regex==2026.7.19
+
+.docx
+.doc
