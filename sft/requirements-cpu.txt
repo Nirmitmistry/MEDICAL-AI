@@ -1,0 +1,7 @@
+# CPU-stage direct dependencies — exact pins
+# GPU-stage packages (torch, peft, accelerate, bitsandbytes, trl) are frozen separately.
+# Generated: 2026-10-25  Python 3.13.5  Windows 10.0.26300 AMD64
+transformers==5.20.2
+pandas==3.1.0
+datasketch==2.0.0
+langid==1.1.6

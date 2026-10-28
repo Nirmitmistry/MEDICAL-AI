@@ -1,0 +1,21 @@
+# sft/ local artifacts — not for version control
+# Virtual environment
+.venv/
+
+# Tokenizer snapshot (weights-free, but large and reproducible)
+tokenizer_snapshot/
+
+# pip caches, egg-info
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Test caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Env manifest (contains local paths — regenerate as needed)
+# environment_manifest.json is COMMITTED (it holds revision SHA + hashes)
+# freeze.txt is COMMITTED

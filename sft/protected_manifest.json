@@ -1,0 +1,474 @@
+{
+  "schema_version": "1",
+  "created_utc": "2026-10-25T11:13:22.277833+00:00",
+  "repo_root": "C:/Users/nirmi/Desktop/Capstone",
+  "total_files": 58,
+  "hashed_count": 58,
+  "unhashed_count": 0,
+  "entries": [
+    {
+      "path": "data/processed/healthchat_11k.csv",
+      "size": 43439432,
+      "mtime": 1788183963.4420805,
+      "mtime_iso": "2026-08-31T13:46:03.442080+00:00",
+      "hashed": true,
+      "sha256": "8bccfcbc8f50b3024d174d7023821b14b1f8a5b835d44d5897ac3e0ca0e3b629"
+    },
+    {
+      "path": "data/processed/integrated_conversations.csv",
+      "size": 175241515,
+      "mtime": 1788800256.8209627,
+      "mtime_iso": "2026-09-07T16:57:36.820963+00:00",
+      "hashed": true,
+      "sha256": "54037bea5fbcce5b56268d56f8281a55e8b02110a2c920d126ef192ac6a45dbe"
+    },
+    {
+      "path": "data/processed/integrated_conversations_ner.csv",
+      "size": 197793035,
+      "mtime": 1788895661.3750424,
+      "mtime_iso": "2026-09-08T19:27:41.375042+00:00",
+      "hashed": true,
+      "sha256": "d8bc1594e70c3d68ab46c6056bf90960a8d6fa0e749d42e71b40690c7d6a9bcb"
+    },
+    {
+      "path": "data/processed/integrated_conversations_ner_validated.csv",
+      "size": 193208186,
+      "mtime": 1789042688.0452363,
+      "mtime_iso": "2026-09-10T12:18:08.045236+00:00",
+      "hashed": true,
+      "sha256": "8363abca022e23d00a1c74f7a9041894075d6f6121202b5573c73ae244e0abdf"
+    },
+    {
+      "path": "data/processed/meddialog_validated.csv",
+      "size": 132527997,
+      "mtime": 1788788701.1154542,
+      "mtime_iso": "2026-09-07T13:45:01.115454+00:00",
+      "hashed": true,
+      "sha256": "967a5f979cafa2f891fb05c035ac30110828fd4f931df35dbdc11e2314b489ee"
+    },
+    {
+      "path": "data/raw/BioASQ/4B1_golden.json",
+      "size": 328329,
+      "mtime": 1786565426.2907624,
+      "mtime_iso": "2026-08-12T20:10:26.290762+00:00",
+      "hashed": true,
+      "sha256": "60d990f006e180dddbffd56541cf2c1d95a3b8b4615c8f3a07af2542c5b7180c"
+    },
+    {
+      "path": "data/raw/BioASQ/4B2_golden.json",
+      "size": 352052,
+      "mtime": 1786565426.2917616,
+      "mtime_iso": "2026-08-12T20:10:26.291762+00:00",
+      "hashed": true,
+      "sha256": "b600b1627469d4874d9cf6f044056bf2139565068a74044b6a669fb9901fc1a2"
+    },
+    {
+      "path": "data/raw/BioASQ/4B3_golden.json",
+      "size": 355051,
+      "mtime": 1786565426.293783,
+      "mtime_iso": "2026-08-12T20:10:26.293783+00:00",
+      "hashed": true,
+      "sha256": "47066328cd258d7b32e2c4509a5a3ad89260aec4757ece7e6a451e8897ef9fd4"
+    },
+    {
+      "path": "data/raw/BioASQ/4B4_golden.json",
+      "size": 392885,
+      "mtime": 1786565426.2958238,
+      "mtime_iso": "2026-08-12T20:10:26.295824+00:00",
+      "hashed": true,
+      "sha256": "f80ba22b582ac287654b66e616bd3fe66732d598a9b381fc79dcac337ad7730c"
+    },
+    {
+      "path": "data/raw/BioASQ/4B5_golden.json",
+      "size": 352575,
+      "mtime": 1786565426.2968369,
+      "mtime_iso": "2026-08-12T20:10:26.296837+00:00",
+      "hashed": true,
+      "sha256": "41f19f2e8f23558412862dd04b1dee22b9276299601770b2ba031591db2dbde8"
+    },
+    {
+      "path": "data/raw/BioASQ/5B1_golden.json",
+      "size": 310459,
+      "mtime": 1786565426.298799,
+      "mtime_iso": "2026-08-12T20:10:26.298799+00:00",
+      "hashed": true,
+      "sha256": "d97cf4d7a81897f00ee304ddf8b55efb1d10b8d5dac4a9d5c2c013e5143d99bd"
+    },
+    {
+      "path": "data/raw/BioASQ/5B2_golden.json",
+      "size": 271050,
+      "mtime": 1786565426.3003058,
+      "mtime_iso": "2026-08-12T20:10:26.300306+00:00",
+      "hashed": true,
+      "sha256": "ba4bc28e1a1a162af445a94ee1c24d4ca7b24ebe0eb22d1313a3d78970d602fa"
+    },
+    {
+      "path": "data/raw/BioASQ/5B3_golden.json",
+      "size": 296533,
+      "mtime": 1786565426.301311,
+      "mtime_iso": "2026-08-12T20:10:26.301311+00:00",
+      "hashed": true,
+      "sha256": "698ec5bdf153a800956ff3c5b41d6a30fbad99373424199a60ef16046aea9d99"
+    },
+    {
+      "path": "data/raw/BioASQ/5B4_golden.json",
+      "size": 290571,
+      "mtime": 1786565426.3038237,
+      "mtime_iso": "2026-08-12T20:10:26.303824+00:00",
+      "hashed": true,
+      "sha256": "57967d4de73e1d80c77ec74d8affdffdb1fa2e5a7ee7c4d4e21d873965aadde2"
+    },
+    {
+      "path": "data/raw/BioASQ/5B5_golden.json",
+      "size": 303869,
+      "mtime": 1786565426.3051128,
+      "mtime_iso": "2026-08-12T20:10:26.305113+00:00",
+      "hashed": true,
+      "sha256": "574950b41ba60270f48afb418700b598eff3099381ca42ffbc2907eff7eb6bcd"
+    },
+    {
+      "path": "data/raw/BioASQ/6B1_golden.json",
+      "size": 598413,
+      "mtime": 1786565426.307078,
+      "mtime_iso": "2026-08-12T20:10:26.307078+00:00",
+      "hashed": true,
+      "sha256": "7876ca6839f3ad59a82a9ba1fed8782e4614daa5c9069420cb9d500e00fa0c4e"
+    },
+    {
+      "path": "data/raw/BioASQ/6B2_golden.json",
+      "size": 841016,
+      "mtime": 1786565426.3100913,
+      "mtime_iso": "2026-08-12T20:10:26.310091+00:00",
+      "hashed": true,
+      "sha256": "ddd8d5f1a3b577b106500aa963f51e89e1d7b6165333f46cdb29f7866afe9ba2"
+    },
+    {
+      "path": "data/raw/BioASQ/6B3_golden.json",
+      "size": 741451,
+      "mtime": 1786565426.3131173,
+      "mtime_iso": "2026-08-12T20:10:26.313117+00:00",
+      "hashed": true,
+      "sha256": "f4a9175bf14e7830c3c0f288127407709d508da854bd3ec2bfc87367877e5694"
+    },
+    {
+      "path": "data/raw/BioASQ/6B4_golden.json",
+      "size": 461074,
+      "mtime": 1786565426.3152134,
+      "mtime_iso": "2026-08-12T20:10:26.315213+00:00",
+      "hashed": true,
+      "sha256": "5d5af06647a09687d21c8b220c886a07a5a7a2d402149b88b5827b293804f714"
+    },
+    {
+      "path": "data/raw/BioASQ/6B5_golden.json",
+      "size": 545434,
+      "mtime": 1786565426.3182204,
+      "mtime_iso": "2026-08-12T20:10:26.318220+00:00",
+      "hashed": true,
+      "sha256": "dc59cbe48c97e20036200c9759be84165d5256a2896ab2242416a2dbb3ed06eb"
+    },
+    {
+      "path": "data/raw/BioASQ/7B_golden.json",
+      "size": 2269656,
+      "mtime": 1786565426.3247254,
+      "mtime_iso": "2026-08-12T20:10:26.324725+00:00",
+      "hashed": true,
+      "sha256": "00478aa5c8d1f26a2ee35fb86b95bf0cbc7a2551c6b304302fcb5315f643a44d"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-4b-1.json",
+      "size": 284109,
+      "mtime": 1786565426.3267312,
+      "mtime_iso": "2026-08-12T20:10:26.326731+00:00",
+      "hashed": true,
+      "sha256": "8e9cbdbaf3b00880f4115a69da49f046ef1a48beeaeed9f61c9532e94ee90962"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-4b-2.json",
+      "size": 276492,
+      "mtime": 1786565426.328738,
+      "mtime_iso": "2026-08-12T20:10:26.328738+00:00",
+      "hashed": true,
+      "sha256": "be170a1ee7468f416b713a55ef7b8157cbe9f4147f64c8fb65263aec73eadf3f"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-4b-3.json",
+      "size": 173415,
+      "mtime": 1786565426.329735,
+      "mtime_iso": "2026-08-12T20:10:26.329735+00:00",
+      "hashed": true,
+      "sha256": "2f98b26111935337522e64be4a929fff5b4629ff12bbe2a3785f41e952cf1741"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-4b-4.json",
+      "size": 212363,
+      "mtime": 1786565426.3307307,
+      "mtime_iso": "2026-08-12T20:10:26.330731+00:00",
+      "hashed": true,
+      "sha256": "087d783959388c9356999c95e71f88d4cd69dd1f0dc92aa426ddcec5ae27dfc8"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-4b-5.json",
+      "size": 207760,
+      "mtime": 1786565426.331731,
+      "mtime_iso": "2026-08-12T20:10:26.331731+00:00",
+      "hashed": true,
+      "sha256": "f80e19eb26dd1bb80ad0915cfe94c8dafafd119fe946987b22c0b3311853baf2"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-5b-1.json",
+      "size": 161553,
+      "mtime": 1786565426.333757,
+      "mtime_iso": "2026-08-12T20:10:26.333757+00:00",
+      "hashed": true,
+      "sha256": "7bce2431636e0bcc29e3ffcbd1edfb06e6601975f90c943a063140eeb536634c"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-5b-2.json",
+      "size": 217716,
+      "mtime": 1786565426.3352962,
+      "mtime_iso": "2026-08-12T20:10:26.335296+00:00",
+      "hashed": true,
+      "sha256": "78bb34fd0e8848d209703d421b0a4c2648806383abea540628f195709551d724"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-5b-3.json",
+      "size": 147734,
+      "mtime": 1786565426.3373065,
+      "mtime_iso": "2026-08-12T20:10:26.337306+00:00",
+      "hashed": true,
+      "sha256": "ace54cd86891bc0af590a9ea0617f83c0a728b043005ddd7f29260c49245aecd"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-5b-4.json",
+      "size": 161309,
+      "mtime": 1786565426.3383076,
+      "mtime_iso": "2026-08-12T20:10:26.338308+00:00",
+      "hashed": true,
+      "sha256": "60ddfadbfa68956b6e5e779ee81719d9a183fd4aeae185e3210ce1da6bed808c"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-5b-5.json",
+      "size": 183723,
+      "mtime": 1786565426.339307,
+      "mtime_iso": "2026-08-12T20:10:26.339307+00:00",
+      "hashed": true,
+      "sha256": "2bc099cf775642e5a5a16f327d72e02f733ef4f0ca0d7fbb4f5bd864a9342b96"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-6b-1.json",
+      "size": 210897,
+      "mtime": 1786565426.3403068,
+      "mtime_iso": "2026-08-12T20:10:26.340307+00:00",
+      "hashed": true,
+      "sha256": "9cd71f32490aa45b3afacc8979edbae06510b270d0601a095780d619161c8b8c"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-6b-2.json",
+      "size": 139689,
+      "mtime": 1786565426.3413067,
+      "mtime_iso": "2026-08-12T20:10:26.341307+00:00",
+      "hashed": true,
+      "sha256": "80874138ea17fede6cf2d97f40dfbe995fd8918d9e133facdbeb38936fadddd9"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-6b-3.json",
+      "size": 167947,
+      "mtime": 1786565426.3428173,
+      "mtime_iso": "2026-08-12T20:10:26.342817+00:00",
+      "hashed": true,
+      "sha256": "109bf9167675d5ddf6ee1dcef0ec9c4dec671ae0eaef5a6b2a5ddaca8a1e7059"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-6b-4.json",
+      "size": 149894,
+      "mtime": 1786565426.3443387,
+      "mtime_iso": "2026-08-12T20:10:26.344339+00:00",
+      "hashed": true,
+      "sha256": "b1a5fc4c0304b985cb69de3de4f91cb68b8591727bbc047b9ea03f117f45d8aa"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-6b-5.json",
+      "size": 245811,
+      "mtime": 1786565426.345872,
+      "mtime_iso": "2026-08-12T20:10:26.345872+00:00",
+      "hashed": true,
+      "sha256": "5ce7040d08dddbbc0338e9d17e191dded9e91204cc1f531c15f7d9506b83daa2"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-factoid-7b.json",
+      "size": 252467,
+      "mtime": 1786565426.34688,
+      "mtime_iso": "2026-08-12T20:10:26.346880+00:00",
+      "hashed": true,
+      "sha256": "64ebbc89752f8c24dc3e78da1bee655afc3db01044493add307b89af1c1032f2"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-test-yesno-7b.json",
+      "size": 237825,
+      "mtime": 1786565426.3488786,
+      "mtime_iso": "2026-08-12T20:10:26.348879+00:00",
+      "hashed": true,
+      "sha256": "cb2b475c97667af51c8f3506a94d3561dfa2e4dd813a3871c3879ecf446ad4b7"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-train-factoid-4b.json",
+      "size": 6650199,
+      "mtime": 1786565426.367553,
+      "mtime_iso": "2026-08-12T20:10:26.367553+00:00",
+      "hashed": true,
+      "sha256": "402bd925bc6050bc5a0a3a4b5fdd74742b09675ab5c4ef2a388c99874e51ee4d"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-train-factoid-5b.json",
+      "size": 10042717,
+      "mtime": 1786565426.3994465,
+      "mtime_iso": "2026-08-12T20:10:26.399446+00:00",
+      "hashed": true,
+      "sha256": "b7591383427dbef23b239be52c4e8e37b0fc857305089f3b1228ad38aa1f0b04"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-train-factoid-6b.json",
+      "size": 9004131,
+      "mtime": 1786565426.4293242,
+      "mtime_iso": "2026-08-12T20:10:26.429324+00:00",
+      "hashed": true,
+      "sha256": "29cd0c99ad84d45e1e56435e6ec854aa6621b068e4d4998eebc5ef066f28377d"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-train-factoid-7b.json",
+      "size": 2769892,
+      "mtime": 1786565426.4370458,
+      "mtime_iso": "2026-08-12T20:10:26.437046+00:00",
+      "hashed": true,
+      "sha256": "89f5afe97409742e93e5e5476fbc0d0cb1add2a314d3c634b2cb8bd72e22e2ba"
+    },
+    {
+      "path": "data/raw/BioASQ/BioASQ-train-yesno-7b.json",
+      "size": 5598968,
+      "mtime": 1786565426.4534423,
+      "mtime_iso": "2026-08-12T20:10:26.453442+00:00",
+      "hashed": true,
+      "sha256": "1f433330bc6919910d28a01cde0cd23849dba041a0dd2948e5a043099526c1c1"
+    },
+    {
+      "path": "data/raw/BioASQ/SHA1.txt",
+      "size": 1311,
+      "mtime": 1786565426.4539502,
+      "mtime_iso": "2026-08-12T20:10:26.453950+00:00",
+      "hashed": true,
+      "sha256": "73a48cd94b1165a3f44d946a2892d7d4e591c2e43cabb69863e4e84952c9d609"
+    },
+    {
+      "path": "data/raw/meddialog/HealthCareMagic-100k.json",
+      "size": 143845222,
+      "mtime": 1787166605.872052,
+      "mtime_iso": "2026-08-19T19:10:05.872052+00:00",
+      "hashed": true,
+      "sha256": "9bcbb2b954c4d792adf3de1163473026b57b9e65afa7600614680bc455904d2f"
+    },
+    {
+      "path": "data/raw/medical_conversations.csv",
+      "size": 173750435,
+      "mtime": 1788185604.584836,
+      "mtime_iso": "2026-08-31T14:13:24.584836+00:00",
+      "hashed": true,
+      "sha256": "8561195b42b4b08715c60f23521e401e29a41b1798f16d36bf08ec43431d8b39"
+    },
+    {
+      "path": "data/raw/medquad.csv",
+      "size": 22835609,
+      "mtime": 1786904722.4466484,
+      "mtime_iso": "2026-08-16T18:25:22.446648+00:00",
+      "hashed": true,
+      "sha256": "f9fe9e60ea69dbbd5a6987e63d041e54e2048d09e317df830b6ba3387e706d53"
+    },
+    {
+      "path": "data/raw/pubmed_abstracts.csv",
+      "size": 49331479,
+      "mtime": 1786460771.575008,
+      "mtime_iso": "2026-08-11T15:06:11.575008+00:00",
+      "hashed": true,
+      "sha256": "23c08e88959f066e3a0f3fc6db2ac3a86cb42268b1d13cd549ad9ef8c69ea444"
+    },
+    {
+      "path": "notebooks/01_eda.ipynb",
+      "size": 4114927,
+      "mtime": 1786909821.6430197,
+      "mtime_iso": "2026-08-16T19:50:21.643020+00:00",
+      "hashed": true,
+      "sha256": "1dc0059dc9fd9e13f1820f6bcd23b1742adced96f4e9f7270e2aa0f0e643f9f0"
+    },
+    {
+      "path": "notebooks/02_edamedquad.ipynb",
+      "size": 518493,
+      "mtime": 1786910620.250235,
+      "mtime_iso": "2026-08-16T20:03:40.250235+00:00",
+      "hashed": true,
+      "sha256": "1d6706e6eceda9ea6d272b65b2012de8f868a596f1548715c971d88143ab9180"
+    },
+    {
+      "path": "notebooks/03_audit_sanitize_validate.ipynb",
+      "size": 55554,
+      "mtime": 1788185609.8889248,
+      "mtime_iso": "2026-08-31T14:13:29.888925+00:00",
+      "hashed": true,
+      "sha256": "a27b519254814ca4a75a1ff0ade5974552dbbbdec621a37b18f1853fd01e886f"
+    },
+    {
+      "path": "notebooks/04_scispacy_ner.ipynb",
+      "size": 81583,
+      "mtime": 1788804746.291847,
+      "mtime_iso": "2026-09-07T18:12:26.291847+00:00",
+      "hashed": true,
+      "sha256": "9ed29b591cc7d89d298c2fef79437c6c195ba1c0980918ec43cb787c2bf90169"
+    },
+    {
+      "path": "notebooks/04_scispacy_ner_kaggle.ipynb",
+      "size": 11103,
+      "mtime": 1789038323.378258,
+      "mtime_iso": "2026-09-10T11:05:23.378258+00:00",
+      "hashed": true,
+      "sha256": "8effe142e6e5932cf3814b4c0d432e171d7c81d4d6a918341d60c669042e37a6"
+    },
+    {
+      "path": "notebooks/05_ner_validation.ipynb",
+      "size": 285180,
+      "mtime": 1789042691.2094145,
+      "mtime_iso": "2026-09-10T12:18:11.209414+00:00",
+      "hashed": true,
+      "sha256": "15c690edea85fae5d615a2a006cacd07a764096876c2c86a8544f430d66800d5"
+    },
+    {
+      "path": "notebooks/06_cleaning_pipeline.ipynb",
+      "size": 49645,
+      "mtime": 1792101534.4395037,
+      "mtime_iso": "2026-10-15T21:58:54.439504+00:00",
+      "hashed": true,
+      "sha256": "358096737924a47a1415cf48218324a436f629805d1030f30c9ace4b8cafd6e7"
+    },
+    {
+      "path": "notebooks/07_bioasq_pubmed_retrieval_dataset.ipynb",
+      "size": 28247,
+      "mtime": 1792834667.0899646,
+      "mtime_iso": "2026-10-24T09:37:47.089965+00:00",
+      "hashed": true,
+      "sha256": "c8d12b0903b558f00e49ea8446dd129a514e1c66153fbdcffefa21671b84989e"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 749,
+      "mtime": 1792834667.0909636,
+      "mtime_iso": "2026-10-24T09:37:47.090964+00:00",
+      "hashed": true,
+      "sha256": "fe343134473adfd0d0a46c73372d2414a06e9db6cde1ae1ae1d91c663062fb8d"
+    },
+    {
+      "path": "scripts/build_retrieval_dataset.py",
+      "size": 31738,
+      "mtime": 1792689103.645394,
+      "mtime_iso": "2026-10-22T17:11:43.645394+00:00",
+      "hashed": true,
+      "sha256": "2dde3a629557f8c9aa51ff3cf1047e0680fc933610f67f934690cc28dd159607"
+    }
+  ]
+}
