@@ -1,6 +1,7 @@
 # sft/ local artifacts — not for version control
-# Virtual environment
+# Virtual environments
 .venv/
+.venv-nb/
 
 # Tokenizer snapshot (weights-free, but large and reproducible)
 tokenizer_snapshot/
@@ -19,3 +20,16 @@ htmlcov/
 # Env manifest (contains local paths — regenerate as needed)
 # environment_manifest.json is COMMITTED (it holds revision SHA + hashes)
 # freeze.txt is COMMITTED
+
+# P1a outputs — dataset text stays private
+work/
+reports/
+
+# Tokenizer package (derived from snapshot + template; rebuilt deterministically)
+tokenizer_pkg/
+
+# Results and GPU work
+results/
+
+# Model snapshot
+model_snapshot/

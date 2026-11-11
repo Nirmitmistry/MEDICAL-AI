@@ -1,0 +1,12 @@
+# sft/requirements-kaggle.txt
+# Packages to install inside a Kaggle notebook session BEFORE running training.
+#
+# Kaggle provides PyTorch pre-installed (with CUDA matching the session GPU).
+# Do NOT install a torch wheel here — it will conflict with Kaggle's own torch.
+#
+# Install with (inside Kaggle notebook cell):
+#   !pip install -q -r sft/requirements-kaggle.txt
+#
+# Pinned at versions tested with transformers==5.20.2 + torch>=2.1.
+peft==0.21.2
+accelerate==1.15.0

@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "A_tokenizer": "PASS",
+    "B_config": "PASS",
+    "C_structure": "FAIL",
+    "D_full_load": "DEFERRED",
+    "E_peft_params": "FAIL"
+  },
+  "tier": "FAIL",
+  "errors": [
+    "structure check exception: No module named 'torch'",
+    "peft check exception: No module named 'torch'"
+  ],
+  "warnings": [
+    "Full load deferred locally: free RAM 4.78 GiB < 6.0 GiB and no GPU available. Run load_check.py in the Kaggle training session to complete checks D and E."
+  ],
+  "max_position_embeddings": 40960,
+  "expected_trainable_params": null,
+  "actual_trainable_params": null,
+  "mean_nll": null,
+  "full_load_attempted": false
+}

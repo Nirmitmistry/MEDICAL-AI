@@ -1,0 +1,16 @@
+# requirements-gpu.txt — SUPERSEDED / LOCAL ONLY — do not use for Kaggle
+#
+# This file was generated for the local development machine:
+#   GPU:  NVIDIA GeForce RTX 3050 Laptop GPU (sm_86, 4 GB VRAM)
+#   CUDA: 12.8 (driver 13.1) — cu128 wheel
+#   OS:   Windows 11 / Python 3.13.5
+#
+# torch==2.11.0+cu128 is specific to CUDA 12.8 and CANNOT be used on Kaggle.
+# The local RTX 3050 has only 4 GB VRAM, which is insufficient for LoRA training.
+#
+# For Kaggle GPU training, use: sft/requirements-kaggle.txt
+#
+# --- Local GPU venv pins (kept for reference, do not install on Kaggle) ---
+torch==2.11.0+cu128
+peft==0.21.2
+accelerate==1.15.0

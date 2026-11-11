@@ -161,7 +161,7 @@ def main() -> None:
         json.dumps(manifest, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
-    print(f"\nManifest written → {OUTPUT_PATH}")
+    print(f"\nManifest written -> {OUTPUT_PATH}")
     print(f"  total={len(entries)}  hashed={len(entries)-unhashed}  unhashed={unhashed}")
 
 

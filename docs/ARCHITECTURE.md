@@ -319,17 +319,24 @@ Greedy decoding; each system also run on base Qwen3-1.7B as baseline.
 
 ### E8. Environment and cost
 
-| GPU available | Path |
-|---|---|
-| ≥15 GB, Turing (Kaggle/Colab T4) | LoRA fp16, micro-batch 1–2. Checkpoint-and-resume is mandatory. |
-| ≥15 GB, Ampere or newer (rented 3090/4090/L4/A100) | LoRA bf16, same config. Fewer hours; removes the fp16 NaN risk. |
-| 8–12 GB | QLoRA NF4 (≈5.3 GB at micro-batch 1 per the fit table), same pipeline. |
-| None | Qwen3-0.6B, data pipeline plus a tiny run only. Pipeline proof, not a quality result. |
+**Training environment: Kaggle (GPU sessions only)**
 
-- **Free tiers.** Kaggle offers T4/P100-class GPUs with 12-hour sessions and a floating weekly quota (≈30 h is commonly reported but undocumented). Colab's free tier publishes no quota, doesn't name the GPU, and may interrupt idle runtimes. Treat both as unreliable, so resumable training is required. The derived JSONL must be uploaded privately (MedDialog terms), and model weights and wheels pre-staged and checksummed.
-- **Paid fallback.** On 23 Oct 2026 the cheapest in-stock on-demand prices were RTX 3090 $0.29/h, L4 $0.59/h and RTX 4090 $0.89/h, with no T4 in stock. Stock is thin, so check at booking.
-- **GPU-hour plan (T4-equivalent).** E0 0.5 + E2 2.25 + final ≤5 + eval ≈1.5 + one contingency rerun ≤5 ≈ **14 h**. That fits one Kaggle quota week if the quota holds. On a rented 3090/4090 it should take about half the hours, roughly US$2–7 total, an estimate that depends on the real speedup.
-- **Throughput.** ≈10 GFLOPs/token puts the T4 planning range at 0.8–1.5k tok/s, a FLOP-derived guess that E0 replaces.
+All model fine-tuning runs on Kaggle. The local development machine (RTX 3050, 4 GB VRAM) does not have sufficient VRAM for LoRA training and is not used for GPU operations.
+
+| Kaggle GPU | Notes |
+|---|---|
+| T4 (16 GB) | LoRA fp16, micro-batch 1–2. Checkpoint-and-resume is mandatory. |
+| P100 (16 GB) | LoRA fp16, same config. |
+| Other (≥ 15 GB) | Precision selected automatically by `kaggle_env_check.py` based on compute capability. bf16 if cc ≥ 8.0, fp16 otherwise. |
+
+The training script must not be run locally with the assumption that any GPU will be available. The `kaggle_env_check.py` verifier enforces Kaggle execution and fails immediately if the environment check does not pass.
+
+- **Free tier.** Kaggle offers T4/P100-class GPUs with 12-hour sessions and a floating weekly quota (≈30 h commonly reported, but undocumented). Resumable training is required because sessions can be interrupted. Model weights and training data must be uploaded as private Kaggle datasets and checksummed before use.
+- **Fallback.** If Kaggle quota is exhausted, use a rented GPU (RTX 3090 $0.29/h, L4 $0.59/h, RTX 4090 $0.89/h as of late 2026). Update `kaggle_env_check.py` check #1 to skip the Kaggle-kernel assertion when running on rented hardware.
+
+**GPU-hour plan (T4-equivalent estimate):**
+E0 0.5 + E2 2.25 + final ≤5 + eval ≈1.5 + one contingency rerun ≤5 ≈ **14 h**.
+That fits one Kaggle quota week if the quota holds. On a rented 3090/4090, roughly half the hours.
 
 ---
 
@@ -428,5 +435,5 @@ Any change needs a written amendment and a re-run of the dependent gates.
 
 ## Open inputs needed before the implementation backlog
 
-1. Which GPU path will be used: Kaggle/Colab, rental, or a lab machine.
-2. Whether a clinician is available to rate the 60 safety probes.
+1. **GPU path:** ✅ **Resolved.** Kaggle is the exclusive GPU environment. The local RTX 3050 is not used for training.
+2. Whether a clinician is available to rate the 60 safety probes (V5).

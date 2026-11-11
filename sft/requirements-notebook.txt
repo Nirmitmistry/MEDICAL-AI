@@ -1,0 +1,5 @@
+# Notebook-only direct dependencies — exact pins resolved by pip
+# Generated: 2026-11-08  Python 3.13.5  Windows 10.0.26300 AMD64
+# Install order: -r requirements-cpu.txt first, then these two.
+ipykernel==7.4.0
+nbconvert==7.17.2
