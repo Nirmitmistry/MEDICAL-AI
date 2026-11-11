@@ -1,0 +1,84 @@
+================================================================================
+PREFLIGHT REPORT — TASK P0b
+Timestamp: 2026-10-29T13:20:00+05:30
+Workspace: /Users/shilpadevi/MEDICAL-AI
+================================================================================
+
+1. P0a STATUS
+- Report file: sft/P0a_REPORT.md
+- Status line: COMPLETE — all acceptance criteria met (2026-10-25)
+
+2. GIT STATE
+- Current HEAD: 070ff32184bf5b3c342abf3c030489dfbf4bad71 ("Setup")
+- P0a baseline HEAD stated in prompt: a2c54b69052073cc8fd4e6cfff2bad3b1be75a63
+- Commits in history since a2c54b6:
+    * 8c92213: Environment setup (committed P0a files and docs)
+    * 8ef17bc: MD files (modified notebook 07 and added scripts/build_retrieval_dataset_v2.py)
+    * 070ff32: Setup (merge commit)
+- git status --short: clean (no modified tracked files)
+
+3. PROTECTED MANIFEST VERIFICATION (sft/verify_manifest.py)
+- Command: python3 sft/verify_manifest.py
+- Result: VERIFICATION FAILED (exit code 1)
+  * 49 Missing files: All 43 files in data/raw/ and 5 files in data/processed/
+    (Reason: data/ is listed in root .gitignore and was not committed to git repository)
+  * 3 Changed files (size / hash mismatch):
+    - requirements.txt: expected 749 bytes (CRLF), actual 709 bytes (LF)
+    - notebooks/03_audit_sanitize_validate.ipynb: expected 55554 bytes (CRLF), actual 54053 bytes (LF)
+    - notebooks/07_bioasq_pubmed_retrieval_dataset.ipynb: expected 28247 bytes, actual 37046 bytes (modified in commit 8ef17bc)
+  * 10 Warnings (new unmanifested files):
+    - scripts/build_retrieval_dataset_v2.py (added in commit 8ef17bc)
+    - 9 PNG files under data/processed/
+
+4. P0a SMOKE TESTS AND CPU ENVIRONMENT (sft/.venv)
+- sft/.venv: MISSING (git-ignored, not present on this machine)
+- sft/tokenizer_snapshot/: MISSING (git-ignored, not present on this machine)
+- P0a 14 offline tests cannot run without recreating sft/.venv and re-downloading tokenizer_snapshot.
+
+5. BASELINE HASHES (sft/requirements-cpu.txt & sft/freeze.txt)
+- sft/requirements-cpu.txt: 30390651a96ea8be4cf383ebc41becb6b5ed4b85b4c345e83f91b0b90add32c0
+- sft/freeze.txt:           fd94be8a90b737ec207dff74e3e6b01d146a6bd289636ca32a631e4e69b766d4
+
+6. DISK & MEMORY
+- Available Disk: 92 GiB on / (requirement: >= 30 GB) -> PASS
+- RAM Total: 8.00 GB (hw.memsize: 8589934592) (P0a machine had 15 GB)
+- RAM Available: ~1.78 GB
+
+7. NETWORK REACHABILITY
+- huggingface.co: REACHABLE (HTTP/2 200)
+- pypi.org: REACHABLE (HTTP/2 200)
+- download.pytorch.org: REACHABLE (https://download.pytorch.org/whl/cpu HTTP/2 200)
+
+8. GPU PROBE (LOCAL)
+- nvidia-smi: NOT FOUND
+- Hardware: Apple M1 (7 cores, Metal 4, non-NVIDIA)
+- NVIDIA CUDA GPU: None available (qualifies for Path D: no usable local GPU)
+
+9. COLLISION CHECK
+- sft/model_snapshot: CLEAN (does not exist)
+- sft/.venv-gpu: CLEAN (does not exist)
+- sft/gpu_probe.py: CLEAN (does not exist)
+- sft/gpu_path.py: CLEAN (does not exist)
+- sft/download_model.py: CLEAN (does not exist)
+- sft/load_check.py: CLEAN (does not exist)
+
+10. DEVIATIONS FROM P0a ASSUMPTIONS
+- Host OS: macOS 15.x Darwin arm64 (Apple M1) vs Windows 10.0.26300 AMD64
+- Logical cores: 8 cores vs 16 cores
+- RAM: 8 GB vs 15 GB
+- System Python: Python 3.13.2 / 3.14.6 vs Python 3.13.5
+- Git HEAD: 070ff32184bf5b3c342abf3c030489dfbf4bad71 vs a2c54b69052073cc8fd4e6cfff2bad3b1be75a63
+
+================================================================================
+GATE DECISION: GATE: STOP
+REASON:
+1. sft/verify_manifest.py failed with 49 missing files and 3 size/hash mismatches.
+   Updating or resolving this requires changing sft/protected_manifest.json or
+   restoring 49 git-ignored data files and reverting CRLF/commit changes.
+2. Rule 9 ("Run sft\verify_manifest.py at the start and at the end (exit 0 both times)")
+   and the mandatory rule "STOP AND ASK ME (do not improvise) if: any hash mismatch
+   or revision drift; anything would need a change outside sft\ or to a protected file"
+   are triggered.
+3. sft/.venv and sft/tokenizer_snapshot are not present in this workspace (git-ignored
+   artifacts not transferred from the P0a machine).
+================================================================================

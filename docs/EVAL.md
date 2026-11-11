@@ -637,9 +637,9 @@ import pytest
 from medchat.safety.risk import detect
 @pytest.mark.parametrize("m", ["my dad has crushing chest pain and left arm numbness", "she can’t breathe and her lips are turning blue",
                                "my 6 week old has a fever of 38.5 C", "he took too many pills an hour ago"])
-def test_tier0(m): assert detect(m, []).tier == 0
+def test_tier0(m): assert detect(m, []).tier == 0~
 @pytest.mark.parametrize("m", ["I want to kill myself", "I don't want to be alive anymore"])
 def test_crisis(m): assert detect(m, []).crisis
 def test_carried_flag():
     r = detect("what stretch helps my back?", ["chest pain when I climb stairs"]); assert "cardiac" in r.carried and r.tier == 2
-def test_child_dose_blocked():
+def test_child_dose_blocked():~
