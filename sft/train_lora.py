@@ -427,12 +427,12 @@ def train(
         with open(pkg_manifest_path, encoding="utf-8") as f:
             pkg_manifest = json.load(f)
 
-    import pkg_resources
+    from importlib.metadata import version as _pkg_version, PackageNotFoundError
     pkg_versions = {}
     for pkg_name in ["torch", "transformers", "peft", "accelerate"]:
         try:
-            pkg_versions[pkg_name] = pkg_resources.get_distribution(pkg_name).version
-        except Exception:
+            pkg_versions[pkg_name] = _pkg_version(pkg_name)
+        except (PackageNotFoundError, Exception):
             pkg_versions[pkg_name] = "unknown"
 
     run_manifest = {

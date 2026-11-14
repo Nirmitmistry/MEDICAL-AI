@@ -13,7 +13,9 @@
 
 ## Stage 3 — Kaggle training
 
-- [ ] (sub-tasks added as prompts are issued)
+- [x] P3a Tokenize and mask (tokenize_mask.py, train_lora.py, build_mix.py, build_tokenizer_pkg.py) — T1-T6 pass, T7 skeleton on CPU; fix: pkg_resources → importlib.metadata in train_lora.py
+- [x] P3b Kaggle notebook (sft/kaggle/p3_kaggle_notebook.ipynb) and local notebook (sft/notebooks/P3_tokenize_mix.ipynb) — both valid nbformat; local notebook must be executed by human (HA1)
+- [ ] P3c Kaggle E0/E2 pilots — HUMAN ACTION PENDING (HA2: upload datasets; HA3: run Kaggle notebook; HA4: report results for Part B)
 
 ## Stage 4 — Evaluation, inference, finalization
 
