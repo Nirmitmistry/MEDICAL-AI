@@ -29,7 +29,7 @@ sft/.venv/Scripts/pip install --no-cache-dir -r sft/requirements-cpu.txt
 ### Run the smoke tests
 
 ```powershell
-sft/.venv/Scripts/python -m unittest discover -v -s sft/tests
+sft\.venv-nb\Scripts\python -m nbconvert --to notebook --execute --inplace sft/notebooks/util/util_smoke_tests.ipynb
 ```
 
 All tests must pass. The tokenizer test requires `sft/tokenizer_snapshot/` to exist.
@@ -37,7 +37,7 @@ All tests must pass. The tokenizer test requires `sft/tokenizer_snapshot/` to ex
 ### Run the manifest verifier
 
 ```powershell
-sft/.venv/Scripts/python sft/verify_manifest.py
+sft\.venv-nb\Scripts\python -m nbconvert --to notebook --execute --inplace sft/notebooks/util/util_verify_manifest.ipynb
 ```
 
 Exit 0 = all protected files match. Exit 1 = something changed or is missing.
@@ -60,7 +60,7 @@ Uses `sft/.venv-nb`. Full run ~3.4 minutes on CPU. Outputs: `sft/reports/g1_repo
 ### Run the local model check
 
 ```powershell
-sft/.venv/Scripts/python sft/load_check.py
+sft\.venv-nb\Scripts\python -m nbconvert --to notebook --execute --inplace sft/notebooks/util/util_load_check.ipynb
 ```
 
 Expected local result: **tier = PASS-PARTIAL**
@@ -70,12 +70,12 @@ Expected local result: **tier = PASS-PARTIAL**
 - D_full_load: DEFERRED (insufficient local RAM — run on Kaggle)
 - E_peft_params: DEFERRED (run on Kaggle)
 
-Checks D and E require a GPU with ≥6 GB VRAM. Run `load_check.py` on Kaggle at the start of training to get a full PASS.
+Checks D and E require a GPU with ≥6 GB VRAM. Run `util_load_check.ipynb` on Kaggle at the start of training to get a full PASS.
 
 ### Rebuild the protected manifest (after intentional changes only)
 
 ```powershell
-sft/.venv/Scripts/python sft/build_manifest.py
+sft\.venv-nb\Scripts\python -m nbconvert --to notebook --execute --inplace sft/notebooks/util/util_build_manifest.ipynb
 ```
 
 ---
@@ -107,18 +107,19 @@ For training, see the Kaggle setup instructions in `docs/IMPLEMENTATION_PLAN.md`
 
 | File | Purpose |
 |---|---|
-| `sft/kaggle_env_check.py` | Verifies Kaggle session: GPU present, VRAM sufficient, precision selected |
-| `sft/gpu_probe.py` | Reports GPU details for the run manifest |
+| `sft/notebooks/util/util_kaggle_env_check.ipynb` | Verifies Kaggle session: GPU present, VRAM sufficient, precision selected |
+| `sft/notebooks/util/util_gpu_probe.ipynb` | Reports GPU details for the run manifest |
 | `sft/requirements-kaggle.txt` | Installs `peft` and `accelerate` on top of Kaggle's pre-installed torch |
-| `sft/load_check.py` | Full model check (A–E) when run with GPU |
+| `sft/notebooks/util/util_load_check.ipynb` | Full model check (A–E) when run with GPU |
 
 **Startup sequence (Kaggle notebook):**
 
 ```python
 import subprocess, os
 
-# 1. Must pass before proceeding
-subprocess.run(["python", "sft/kaggle_env_check.py"], check=True)
+# 1. Must pass before proceeding (execute util_kaggle_env_check notebook)
+# Can be run directly as a notebook or via nbconvert
+subprocess.run(["jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "sft/notebooks/util/util_kaggle_env_check.ipynb"], check=True)
 
 # 2. Install missing packages (torch pre-installed by Kaggle)
 subprocess.run(["pip", "install", "-q", "-r", "sft/requirements-kaggle.txt"], check=True)
@@ -133,16 +134,16 @@ os.environ["HF_HUB_OFFLINE"] = "1"
 
 | File | Runs on | Purpose |
 |---|---|---|
-| `kaggle_env_check.py` | Kaggle | Session verifier: GPU, VRAM, precision selection |
-| `gpu_probe.py` | Kaggle | Detailed GPU diagnostic for run manifest |
-| `load_check.py` | Local (A–C) / Kaggle (D–E) | Model tokenizer + structure + load check |
-| `download_model.py` | Local | Download and SHA-256 verify Qwen3-1.7B weights |
-| `build_manifest.py` | Local | Hash protected files into `protected_manifest.json` |
-| `verify_manifest.py` | Local | Stdlib-only manifest verifier |
+| `notebooks/util/util_kaggle_env_check.ipynb` | Kaggle | Session verifier: GPU, VRAM, precision selection |
+| `notebooks/util/util_gpu_probe.ipynb` | Kaggle | Detailed GPU diagnostic for run manifest |
+| `notebooks/util/util_load_check.ipynb` | Local (A–C) / Kaggle (D–E) | Model tokenizer + structure + load check |
+| `notebooks/util/util_download_model.ipynb` | Local | Download and SHA-256 verify Qwen3-1.7B weights |
+| `notebooks/util/util_build_manifest.ipynb` | Local | Hash protected files into `protected_manifest.json` |
+| `notebooks/util/util_verify_manifest.ipynb` | Local | Stdlib-only manifest verifier |
 | `requirements-cpu.txt` | Local | CPU dev environment dependencies |
 | `requirements-kaggle.txt` | Kaggle | Training dependencies (peft, accelerate) |
 | `freeze.txt` | Local | Full CPU pip freeze |
 | `freeze-gpu.txt` | — | Historical local GPU venv (RTX 3050; not for Kaggle) |
 | `requirements-gpu.txt` | — | Superseded; RTX 3050-specific; not for Kaggle |
 | `environment_manifest.json` | Local | CPU-stage environment record |
-| `tests/test_smoke.py` | Local | CPU smoke tests |
+| `notebooks/util/util_smoke_tests.ipynb` | Local | CPU smoke tests |
