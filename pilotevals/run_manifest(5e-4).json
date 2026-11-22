@@ -1,0 +1,52 @@
+{
+  "config": {
+    "DRY_RUN": false,
+    "behavior_jsonl": "/kaggle/input/datasets/nirmitmistry/behavior-set/behaviors.jsonl",
+    "effective_batch": 32,
+    "epochs": 1,
+    "eval_every": 100,
+    "grad_accum": 32,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_r": 16,
+    "lr": 5e-05,
+    "max_len": 2048,
+    "max_steps": 150,
+    "micro_batch": 1,
+    "model_dir": "/kaggle/input/datasets/nirmitmistry/qwen3-weights/",
+    "n_train_dialogues": 5000,
+    "output_dir": "/kaggle/working/checkpoints",
+    "save_every": 100,
+    "seed": 42,
+    "train_jsonl": "/kaggle/input/datasets/nirmitmistry/sft-data/dialogues_train.jsonl",
+    "val_healthchat_n": 200,
+    "val_jsonl": "/kaggle/input/datasets/nirmitmistry/sft-data/dialogues_val.jsonl",
+    "val_meddialog_n": 200
+  },
+  "data_hashes": {
+    "behavior": null,
+    "train": "52a61c991d368e697a6a377b4959bd3d8f05e623326d86bb3c2e93f02716d792",
+    "val": "33ef743b45ca771876d9f9d3aac35c85ffea3e0c75968e161f48e6e4d8ad6f69"
+  },
+  "gpu_probe": {
+    "bf16_supported": false,
+    "compute_capability": "7.5",
+    "device": "Tesla T4",
+    "free_vram_gb": 15.64,
+    "total_vram_gb": 15.64,
+    "training_dtype": "fp16"
+  },
+  "has_behavior_set": false,
+  "library_versions": {
+    "accelerate": "1.15.0",
+    "peft": "0.21.2",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2"
+  },
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "sysprompt_hash": "e68af7244b7f6332620cd69a67cd4c17e800e5b59401067765cb1903ffa5b0a4",
+  "template_hash": "d2771c9694cc22f4d983cbf2344551d4d0933156a927f673584a358e4aee0563",
+  "tokenizer_hash": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "train_dialogues": 5000,
+  "val_subset_size": 400
+}
