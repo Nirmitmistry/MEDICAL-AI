@@ -1,0 +1,35 @@
+{
+  "macro_val_loss": 1.72483,
+  "nll_by_exchange_position": {
+    "first_exchange_nll": 1.128726,
+    "later_exchange_nll": 1.083128,
+    "n_dialogues_first": 185,
+    "n_dialogues_later": 185,
+    "source": "HealthChat-WildChat"
+  },
+  "nll_per_source": {
+    "HealthChat-WildChat": {
+      "n_dialogues": 223,
+      "n_sup_tokens": 180495,
+      "nll": 1.087809
+    },
+    "MedDialog": {
+      "n_dialogues": 500,
+      "n_sup_tokens": 60371,
+      "nll": 2.361851
+    }
+  },
+  "note": "NLL measures fit to the target distribution, not medical correctness.",
+  "overall": {
+    "bootstrap_95ci_nll": {
+      "hi": 1.706089,
+      "lo": 1.599519,
+      "n_resamples": 1000,
+      "seed": 42
+    },
+    "n_dialogues": 1020,
+    "n_sup_tokens": 411244,
+    "nll": 1.651494,
+    "perplexity": 5.2148
+  }
+}

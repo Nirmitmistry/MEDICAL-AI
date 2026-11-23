@@ -1,0 +1,8 @@
+{
+  "bf16_supported": false,
+  "compute_capability": "7.5",
+  "device": "Tesla T4",
+  "free_vram_gb": 15.64,
+  "total_vram_gb": 15.64,
+  "training_dtype": "fp16"
+}
