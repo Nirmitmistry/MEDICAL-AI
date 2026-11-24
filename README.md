@@ -863,7 +863,7 @@ If someone may be experiencing a medical emergency, contact local emergency serv
 
 ### Faculty supervisor
 
-- **Faculty supervisor:** `[Name, title, department]`
+- **Faculty supervisor: Dr. Gopa Bhaumik 
 
 ### Acknowledgments
 
